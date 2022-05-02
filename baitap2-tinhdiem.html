@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính Điểm ĐH Khối D</h1>
+    Môn Toán <input type="text" id="math">
+    Môn Văn <input type="text" id="lite">
+    Môn Anh <input type="text" id="Eng">
+    Khu vực <select id="area">
+        <option value="0.75">KV1</option>
+        <option value="0.5">KV2-NT</option>
+        <option value="0.25">KV2</option>
+        <option value="0">KV3</option>
+    </select> <br>
+    <button onclick="showscore()">Tính điểm</button>
+    <h2 style="color: red;">Tính điểm ĐH Khối D của bạn là<span id="result"></span></h2>
+</body>
+<script>
+    function showscore() {
+    let math = parseFloat(document.getElementById("math").value)
+    let lite = parseFloat(document.getElementById("lite").value)
+    let Eng = parseFloat(document.getElementById("Eng").value)
+    let area = parseFloat(document.getElementById("area").value)
+    document.getElementById("result").innerHTML = math+lite+Eng+area
+    }
+</script>
+</html>
